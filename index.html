@@ -1,1 +1,1132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Bebe, Kaitlyn 🌻</title>
 
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&family=Parisienne&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #fffaf2;
+    color: #3d3028;
+    overflow-x: hidden;
+}
+
+section {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+button {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* =========================
+   FLOWER PETALS
+========================= */
+
+.petal {
+    position: fixed;
+    top: -40px;
+    z-index: 100;
+    pointer-events: none;
+    animation: fall linear forwards;
+    opacity: .85;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-50px) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: .9;
+    }
+    100% {
+        transform: translateY(110vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+/* =========================
+   OPENING
+========================= */
+
+#opening {
+    background:
+        radial-gradient(circle at 50% 40%, #493b32 0%, #211b18 55%, #100e0d 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: opacity 1.5s ease, visibility 1.5s ease;
+}
+
+.opening-content {
+    padding: 30px;
+    animation: fadeUp 2s ease;
+}
+
+.tiny-flower {
+    font-size: 48px;
+    margin-bottom: 25px;
+    animation: floatFlower 3s ease-in-out infinite;
+}
+
+.opening-content h1 {
+    font-family: 'Parisienne', cursive;
+    font-size: clamp(48px, 12vw, 90px);
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.opening-content p {
+    font-size: 14px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #eadcc8;
+    margin-bottom: 40px;
+}
+
+.enter-btn {
+    border: 1px solid rgba(255,255,255,.5);
+    background: rgba(255,255,255,.08);
+    color: white;
+    padding: 16px 34px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 13px;
+    letter-spacing: 2px;
+    transition: .4s;
+    backdrop-filter: blur(5px);
+}
+
+.enter-btn:hover {
+    background: white;
+    color: #3d3028;
+    transform: translateY(-3px);
+}
+
+@keyframes floatFlower {
+    0%,100% { transform: translateY(0) rotate(-4deg); }
+    50% { transform: translateY(-12px) rotate(4deg); }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   MAIN HERO
+========================= */
+
+#hero {
+    background:
+        radial-gradient(circle at 50% 45%, #fffdf8, #f9ead1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 30px;
+}
+
+.hero-small {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: #9a7950;
+    margin-bottom: 20px;
+}
+
+.hero-content h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(45px, 10vw, 90px);
+    line-height: .9;
+    font-weight: 600;
+}
+
+.hero-content h2 span {
+    display: block;
+    font-family: 'Parisienne', cursive;
+    font-size: clamp(65px, 14vw, 120px);
+    font-weight: 400;
+    margin-top: 10px;
+}
+
+.hero-subtitle {
+    margin-top: 25px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 23px;
+    font-style: italic;
+}
+
+.scroll-hint {
+    margin-top: 50px;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    opacity: .6;
+}
+
+/* Sunflower decorations */
+
+.sunflower {
+    position: absolute;
+    font-size: clamp(50px, 9vw, 100px);
+    animation: sway 5s ease-in-out infinite;
+}
+
+.sf1 { left: 4%; bottom: 8%; }
+.sf2 { right: 5%; top: 10%; animation-delay: 1s; }
+.sf3 { right: 9%; bottom: 4%; animation-delay: 2s; }
+.sf4 { left: 8%; top: 12%; animation-delay: 1.5s; }
+
+@keyframes sway {
+    0%,100% { transform: rotate(-5deg) translateY(0); }
+    50% { transform: rotate(6deg) translateY(-10px); }
+}
+
+/* =========================
+   ACHIEVEMENT
+========================= */
+
+#achievement {
+    background: #fffaf2;
+    padding: 80px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.achievement-wrap {
+    width: min(1100px, 100%);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.photo-frame {
+    position: relative;
+    max-width: 480px;
+    margin: auto;
+}
+
+.photo-frame img {
+    width: 100%;
+    display: block;
+    border-radius: 240px 240px 20px 20px;
+    box-shadow: 0 30px 70px rgba(90,60,30,.2);
+}
+
+.photo-frame::before {
+    content: "🌻";
+    position: absolute;
+    font-size: 75px;
+    right: -35px;
+    top: -35px;
+    z-index: 3;
+    transform: rotate(15deg);
+}
+
+.photo-frame::after {
+    content: "🌼";
+    position: absolute;
+    font-size: 55px;
+    left: -30px;
+    bottom: 20px;
+    z-index: 3;
+}
+
+.achievement-text .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 11px;
+    color: #a17b4e;
+}
+
+.achievement-text h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(45px, 6vw, 72px);
+    line-height: .95;
+    margin: 15px 0 20px;
+}
+
+.achievement-text h2 span {
+    color: #a17b4e;
+}
+
+.achievement-text p {
+    line-height: 1.9;
+    font-size: 15px;
+    color: #6d5b4e;
+}
+
+.nursing-badge {
+    margin-top: 25px;
+    display: inline-block;
+    padding: 12px 20px;
+    border: 1px solid #d7bd98;
+    border-radius: 50px;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+/* =========================
+   CAPPING
+========================= */
+
+#capping {
+    background: #f5ead9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.capping-content {
+    max-width: 850px;
+}
+
+.capping-icon {
+    font-size: 65px;
+    margin-bottom: 20px;
+}
+
+.capping-content h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(45px, 8vw, 75px);
+    line-height: 1;
+}
+
+.capping-content .school {
+    margin-top: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 12px;
+}
+
+.capping-content .story {
+    max-width: 650px;
+    margin: 40px auto 0;
+    line-height: 2;
+    font-size: 16px;
+    color: #69594d;
+}
+
+.quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    font-style: italic;
+    margin-top: 35px;
+}
+
+/* =========================
+   MEMORIES
+========================= */
+
+#memories {
+    background: #fffdf8;
+    padding: 90px 20px;
+    text-align: center;
+}
+
+.memories-title {
+    max-width: 700px;
+    margin: auto;
+}
+
+.memories-title .eyebrow {
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #9a7950;
+}
+
+.memories-title h2 {
+    font-family: 'Parisienne', cursive;
+    font-size: clamp(55px, 10vw, 85px);
+    font-weight: 400;
+    margin-top: 10px;
+}
+
+.single-memory {
+    max-width: 550px;
+    margin: 50px auto;
+    position: relative;
+}
+
+.single-memory img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 25px 60px rgba(70,45,20,.18);
+}
+
+.memory-caption {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-style: italic;
+    margin-top: 25px;
+}
+
+/* =========================
+   LETTER
+========================= */
+
+#letter {
+    background: #f7ecdc;
+    min-height: 100vh;
+    padding: 90px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.letter-container {
+    width: min(850px, 100%);
+}
+
+.letter-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.letter-title h2 {
+    font-family: 'Parisienne', cursive;
+    font-size: clamp(55px, 10vw, 90px);
+    font-weight: 400;
+}
+
+.envelope {
+    max-width: 650px;
+    margin: auto;
+    cursor: pointer;
+    text-align: center;
+}
+
+.envelope-front {
+    background: #fffaf0;
+    border-radius: 10px;
+    padding: 70px 30px;
+    box-shadow: 0 25px 70px rgba(80,50,20,.15);
+    border: 1px solid #ead8bd;
+    transition: .5s;
+}
+
+.envelope-front:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 35px 80px rgba(80,50,20,.2);
+}
+
+.envelope-front .mail-icon {
+    font-size: 70px;
+}
+
+.envelope-front h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 35px;
+    margin: 20px 0 10px;
+}
+
+.envelope-front p {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    opacity: .6;
+}
+
+.letter-paper {
+    display: none;
+    background: #fffdf7;
+    padding: clamp(30px, 7vw, 70px);
+    box-shadow: 0 25px 70px rgba(80,50,20,.15);
+    border-radius: 5px;
+    text-align: left;
+    animation: letterOpen 1s ease;
+}
+
+@keyframes letterOpen {
+    from {
+        opacity: 0;
+        transform: scale(.96) translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.letter-paper h3 {
+    font-family: 'Parisienne', cursive;
+    font-size: 45px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.letter-paper p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    line-height: 1.75;
+    margin-bottom: 20px;
+}
+
+.signature {
+    margin-top: 35px;
+    text-align: right;
+    font-family: 'Parisienne', cursive;
+    font-size: 38px;
+}
+
+/* =========================
+   FINAL
+========================= */
+
+#final {
+    background:
+        radial-gradient(circle at center, #fff4d9 0%, #f3d49b 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.final-content {
+    padding: 30px;
+    position: relative;
+    z-index: 2;
+}
+
+.final-flowers {
+    font-size: 55px;
+    letter-spacing: 5px;
+    margin-bottom: 25px;
+}
+
+.final-content h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(38px, 8vw, 75px);
+    line-height: 1;
+}
+
+.final-content h2 span {
+    font-family: 'Parisienne', cursive;
+    font-weight: 400;
+    font-size: 1.35em;
+}
+
+.final-message {
+    margin: 30px auto;
+    max-width: 650px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    font-style: italic;
+    line-height: 1.6;
+}
+
+.final-love {
+    font-size: clamp(22px, 5vw, 42px);
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    margin-top: 35px;
+}
+
+.from {
+    margin-top: 35px;
+    font-family: 'Parisienne', cursive;
+    font-size: 42px;
+}
+
+/* MUSIC */
+
+.music-btn {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 500;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid #d4b681;
+    background: rgba(255,250,240,.9);
+    cursor: pointer;
+    font-size: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.12);
+    display: none;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 750px) {
+
+    .achievement-wrap {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .achievement-text {
+        text-align: center;
+    }
+
+    .photo-frame {
+        max-width: 340px;
+    }
+
+    .achievement-text h2 {
+        font-size: 55px;
+    }
+
+    .capping-content .story {
+        font-size: 15px;
+    }
+
+    .letter-paper p {
+        font-size: 19px;
+    }
+
+    .sunflower {
+        font-size: 55px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     OPENING
+========================= -->
+
+<section id="opening">
+
+    <div class="opening-content">
+
+        <div class="tiny-flower">🌻</div>
+
+        <h1>My Bebe...</h1>
+
+        <p>I made something for you.</p>
+
+        <button class="enter-btn" onclick="enterSite()">
+            OPEN YOUR SURPRISE ♡
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section id="hero">
+
+    <div class="sunflower sf1">🌻</div>
+    <div class="sunflower sf2">🌻</div>
+    <div class="sunflower sf3">🌻</div>
+    <div class="sunflower sf4">🌻</div>
+
+    <div class="hero-content">
+
+        <div class="hero-small">
+            September 12, 2026
+        </div>
+
+        <h2>
+            Congratulations,
+            <span>Kaitlyn</span>
+        </h2>
+
+        <div class="hero-subtitle">
+            To my beautiful future nurse 🩺
+        </div>
+
+        <div class="scroll-hint">
+            ↓ keep scrolling ↓
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ACHIEVEMENT
+========================= -->
+
+<section id="achievement">
+
+    <div class="achievement-wrap">
+
+        <div class="photo-frame">
+            <img src="kaitlyn.jpg" alt="Kaitlyn">
+        </div>
+
+        <div class="achievement-text">
+
+            <div class="eyebrow">
+                Adamson University
+            </div>
+
+            <h2>
+                Look at<br>
+                <span>you.</span>
+            </h2>
+
+            <p>
+                Three years and six months of loving you,
+                and I still get amazed by the woman you are
+                becoming.
+            </p>
+
+            <p style="margin-top:18px;">
+                Today, you take another beautiful step toward
+                becoming the nurse you've worked so hard to be.
+            </p>
+
+            <div class="nursing-badge">
+                BACHELOR OF SCIENCE IN NURSING 🩺
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CAPPING
+========================= -->
+
+<section id="capping">
+
+    <div class="capping-content">
+
+        <div class="capping-icon">
+            🩺 🎓 🌻
+        </div>
+
+        <div class="hero-small">
+            Capping & Pinning Ceremony
+        </div>
+
+        <h2>
+            Today, you wear<br>
+            your cap and pin.
+        </h2>
+
+        <div class="school">
+            Adamson University · BS Nursing
+        </div>
+
+        <p class="story">
+            But I know that what I'm celebrating isn't just
+            a cap, a pin, or a ceremony.
+            <br><br>
+            I'm celebrating every late night, every stressful
+            day, every examination, every moment you doubted
+            yourself, and every time you still chose to keep
+            going.
+        </p>
+
+        <div class="quote">
+            "You made it this far. And I'm so damn proud of you."
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     MEMORIES
+========================= -->
+
+<section id="memories">
+
+    <div class="memories-title">
+
+        <div class="eyebrow">
+            One of my favorite views
+        </div>
+
+        <h2>
+            My Bebe
+        </h2>
+
+    </div>
+
+    <div class="single-memory">
+
+        <img src="kaitlyn.jpg" alt="My Bebe">
+
+        <div class="memory-caption">
+            "The girl whose smile still gets me every time."
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     LETTER
+========================= -->
+
+<section id="letter">
+
+    <div class="letter-container">
+
+        <div class="letter-title">
+            <div class="hero-small">
+                Something I wanted to tell you
+            </div>
+
+            <h2>
+                A letter for you
+            </h2>
+        </div>
+
+        <div class="envelope" onclick="openLetter()">
+
+            <div class="envelope-front">
+
+                <div class="mail-icon">💌</div>
+
+                <h3>
+                    From Pat
+                </h3>
+
+                <p>
+                    Tap to open
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="letter-paper" id="letterPaper">
+
+            <h3>
+                Hello, Bebe.
+            </h3>
+
+            <p>
+                I just want to congratulate you.
+                I just want you to know that I am always
+                proud of you.
+            </p>
+
+            <p>
+                I have always been proud of what you were
+                and what you'll become.
+            </p>
+
+            <p>
+                I know that I have wronged you and hurt you
+                many times, and that the world had been sore
+                and sour to us. But nothing changes —
+                I still wanna marry you.
+            </p>
+
+            <p>
+                It's fine if you don't wanna use my surname
+                in the future. It's totally fine with me,
+                but I don't know if it's fine with the
+                government HAHAHAHAHA.
+            </p>
+
+            <p>
+                I will work hard for us. And don't worry,
+                I won't be an egoistic man if your job pays
+                more than I do.
+            </p>
+
+            <p>
+                I will support you a hundred percent and
+                be the husband to the best of my ability.
+            </p>
+
+            <p>
+                When the time comes that we will deliver
+                a child into this world, I vow that we will
+                make this world a better place.
+            </p>
+
+            <p>
+                We may not be calling or talking to each
+                other every minute or every day like other
+                people, but our love for each other stays
+                and keeps on growing.
+            </p>
+
+            <p>
+                This letter is getting too long, so I'll
+                just end it here. Just wait for the rest
+                on our wedding day. I still wanna make it
+                exciting.
+            </p>
+
+            <p>
+                Just always bear in your mind that I always
+                love you and I'm always proud of you,
+                no matter how little your achievements are.
+            </p>
+
+            <p>
+                <strong>
+                GALINGAN MO NURSE KO, ALAGAAN MO ANG PUSO KO
+                AT AALAGAAN KITA HABANG BUHAY.
+                </strong>
+            </p>
+
+            <p>
+                PAG NAMATAY KA MAMAMATAY NARIN AKO KASIIII !!!
+                😂❤️
+            </p>
+
+            <p>
+                I LOVE YOU BEBE!!!!
+                CONGRATULATIONS!!!
+            </p>
+
+            <div class="signature">
+                — Pat ❤️
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FINAL
+========================= -->
+
+<section id="final">
+
+    <div class="final-content">
+
+        <div class="final-flowers">
+            🌻 🌻 🌻
+        </div>
+
+        <h2>
+            Congratulations,<br>
+            <span>My Future Nurse</span>
+        </h2>
+
+        <div class="final-message">
+
+            I couldn't bring you flowers today...
+
+            <br>
+
+            So I made you a garden instead.
+
+        </div>
+
+        <div class="final-love">
+            "It's not living if it's not with you."
+        </div>
+
+        <div class="from">
+            I love you, Bebe.
+            <br>
+            — Pat
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- MUSIC BUTTON -->
+
+<button class="music-btn" id="musicBtn" onclick="toggleMusic()">
+    🎵
+</button>
+
+<!--
+    OPTIONAL MUSIC
+
+    If you have an audio file you are allowed to use,
+    upload it to the repository as:
+
+    song.mp3
+
+    Then uncomment the audio element below.
+
+<audio id="music" loop>
+    <source src="song.mp3" type="audio/mpeg">
+</audio>
+-->
+
+
+<script>
+
+function enterSite() {
+
+    const opening = document.getElementById("opening");
+
+    opening.style.opacity = "0";
+
+    setTimeout(() => {
+        opening.style.visibility = "hidden";
+        document.getElementById("hero").scrollIntoView({
+            behavior: "smooth"
+        });
+    }, 1200);
+
+    createPetals();
+
+    document.getElementById("musicBtn").style.display = "block";
+
+}
+
+
+function createPetals() {
+
+    setInterval(() => {
+
+        const petal = document.createElement("div");
+
+        petal.className = "petal";
+
+        const flowers = ["🌸","🌼","🌻","✿","❀"];
+
+        petal.innerHTML =
+            flowers[Math.floor(Math.random() * flowers.length)];
+
+        petal.style.left =
+            Math.random() * 100 + "vw";
+
+        petal.style.fontSize =
+            (12 + Math.random() * 18) + "px";
+
+        petal.style.animationDuration =
+            (5 + Math.random() * 7) + "s";
+
+        document.body.appendChild(petal);
+
+        setTimeout(() => {
+            petal.remove();
+        }, 13000);
+
+    }, 650);
+
+}
+
+
+function openLetter() {
+
+    document.querySelector(".envelope").style.display = "none";
+
+    const paper = document.getElementById("letterPaper");
+
+    paper.style.display = "block";
+
+    paper.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+
+    for (let i = 0; i < 20; i++) {
+
+        setTimeout(() => {
+
+            const petal = document.createElement("div");
+
+            petal.className = "petal";
+
+            petal.innerHTML = "🌻";
+
+            petal.style.left =
+                Math.random() * 100 + "vw";
+
+            petal.style.fontSize =
+                (12 + Math.random() * 15) + "px";
+
+            petal.style.animationDuration =
+                (4 + Math.random() * 4) + "s";
+
+            document.body.appendChild(petal);
+
+            setTimeout(() => petal.remove(), 9000);
+
+        }, i * 100);
+
+    }
+
+}
+
+
+function toggleMusic() {
+
+    const music = document.getElementById("music");
+
+    if (!music) {
+
+        alert(
+            "Music can be added by uploading an audio file named song.mp3 to the website."
+        );
+
+        return;
+
+    }
+
+    if (music.paused) {
+
+        music.play();
+
+        document.getElementById("musicBtn").innerHTML = "🔊";
+
+    } else {
+
+        music.pause();
+
+        document.getElementById("musicBtn").innerHTML = "🎵";
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
